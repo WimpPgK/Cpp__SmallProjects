@@ -18,19 +18,16 @@ public:
     Node();
 
 };
-
+/*****************************************************************/
 Node::Node()
 {
     prev = 0;
     next = 0;
-
 }
 
+/*****************************************************************/
 
-
-Node* root = 0; // to musi byc zmienna globalna, zeby ulegala zmiana
-
-
+Node* root = 0; 
 int main()
 {
     srand(time(NULL));
@@ -44,7 +41,6 @@ int main()
     }
     */
 
-
     // create doubly linked list with sorted element
     for (int i = 0; i < 20; i++)
     {
@@ -55,7 +51,7 @@ int main()
 }
 
 
-
+/*****************************************************************/
 void insertNode_InOrder(int a)
 {
     Node* newElement = new Node;
@@ -94,7 +90,6 @@ void insertNode_InOrder(int a)
                 newElement->prev = itr;
                 newElement->next = pointer;
                 pointer->prev = newElement;
-
             }
         }
     }
@@ -103,7 +98,7 @@ void insertNode_InOrder(int a)
 }
 
 
-
+/*****************************************************************/
 void insertNode(int a)
 {
     Node* newElement = new Node;
@@ -127,8 +122,7 @@ void insertNode(int a)
     }
 }
 
-
-
+/*****************************************************************/
 void printDoubleDirection()
 {
     Node* tmp = root;
@@ -151,5 +145,4 @@ void printDoubleDirection()
     cout << tmp->val;
     cout << "->H";
     cout << endl << endl << endl;
-
 }
